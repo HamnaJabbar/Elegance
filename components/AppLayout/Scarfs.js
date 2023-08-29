@@ -11,14 +11,7 @@ import Cart from '../Cart';
 import CartIcon from '../CartIcon';
 
 export const Scarfs = ({ children }) => {
-  const { user } = useUser();
-  const [showUserInfo, setShowUserInfo] = useState(false);
-
-  const toggleUserInfo = () => {
-    setShowUserInfo(!showUserInfo);
-  };
-
-  return (
+   return (
     <div className="h-screen max-h-screen flex flex-col">
       <header className="bg-white-800 p-2 fixed w-full top-0 z-50 flex justify-between items-center">
         <div className="mx-auto">

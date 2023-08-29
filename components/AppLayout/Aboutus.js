@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useUser } from "@auth0/nextjs-auth0/client";
 import LogoImage from "../../public/logo2.png";
 import styles from "./Footer.module.css"; 
 
 export const Aboutus = ({ children }) => {
-  const { user } = useUser();
-  const [showUserInfo, setShowUserInfo] = useState(false);
-
-  const toggleUserInfo = () => {
-    setShowUserInfo(!showUserInfo);
-  };
 
   return (
     <div className="h-screen max-h-screen flex flex-col">

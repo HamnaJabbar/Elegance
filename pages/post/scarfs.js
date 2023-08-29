@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+
 import {Scarfs} from '../../components/AppLayout/Scarfs';
 
 export default function NewPost(props) {
@@ -14,9 +14,9 @@ export default function NewPost(props) {
   NewPost.getLayout = function getLayout(page, pageProps){
     return <Scarfs {...pageProps}>{page}</Scarfs>
   }
-  export const getServerSideProps = withPageAuthRequired(() =>{
-    
+  export const getServerSideProps = () => {
     return {
-      props:{},
+      props: {},
     };
-  });
+  };
+  

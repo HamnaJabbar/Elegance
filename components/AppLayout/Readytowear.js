@@ -13,12 +13,12 @@ import CartIcon from '../CartIcon';
 import MyComponent from '../Quote';
 
 export const Readytowear = ({ children }) => {
-  const { user } = useUser();
-  const [showUserInfo, setShowUserInfo] = useState(false);
+  // const { user } = useUser();
+  // const [showUserInfo, setShowUserInfo] = useState(false);
 
-  const toggleUserInfo = () => {
-    setShowUserInfo(!showUserInfo);
-  };
+  // const toggleUserInfo = () => {
+  //   setShowUserInfo(!showUserInfo);
+  // };
 
   return (
     <div className="h-screen max-h-screen flex flex-col">

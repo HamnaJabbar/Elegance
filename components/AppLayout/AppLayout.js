@@ -11,12 +11,7 @@ import CartIcon from '../CartIcon';
 
 
 export const AppLayout = ({ children }) => {
-  const { user } = useUser();                                //retrive
-  const [showUserInfo, setShowUserInfo] = useState(false);
 
-  const toggleUserInfo = () => {
-    setShowUserInfo(!showUserInfo);
-  };
 
   return (
     <div className="h-screen max-h-screen flex flex-col">

@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+// import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import {Bridal} from '../../components/AppLayout/Bridal';
 
 export default function NewPost(props) {
@@ -14,9 +14,15 @@ export default function NewPost(props) {
   NewPost.getLayout = function getLayout(page, pageProps){
     return <Bridal {...pageProps}>{page}</Bridal>
   }
-  export const getServerSideProps = withPageAuthRequired(() =>{
+  // export const getServerSideProps = withPageAuthRequired(() =>{
     
+  //   return {
+  //     props:{},
+  //   };
+  // });
+  export const getServerSideProps = () => {
     return {
-      props:{},
+      props: {},
     };
-  });
+  };
+  

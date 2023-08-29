@@ -11,12 +11,6 @@ import Cart from '../Cart';
 import CartIcon from '../CartIcon';
 
 export const Bridal = ({ children }) => {
-  const { user } = useUser();
-  const [showUserInfo, setShowUserInfo] = useState(false);
-
-  const toggleUserInfo = () => {
-    setShowUserInfo(!showUserInfo);
-  };
 
   return (
     <div className="h-screen max-h-screen flex flex-col">
