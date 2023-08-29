@@ -3,6 +3,7 @@ import BgImage from '../public/bg.jpeg';
 import Link from "next/link";
 import Logo from "../public/logo2.png";
 
+
 export default function Home() {
   return (
     <div className="w-screen h-screen overflow-hidden flex justify-content items-center relative">
@@ -12,6 +13,7 @@ export default function Home() {
         <Link href="/post/new" className="btn">
         Tap to Discover Your Perfect Look with Elegance!➡
         </Link>
+        
       </div>
     </div>
   );

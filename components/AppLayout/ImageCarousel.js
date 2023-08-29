@@ -22,8 +22,8 @@ const ImageCarousel = () => {
     <Carousel
       showThumbs={false}
       showStatus={false}
-      selectedItem={activeSlide} // Set the active slide based on state
-      onChange={(index) => setActiveSlide(index)} // Update active slide on manual change
+      selectedItem={activeSlide} 
+      onChange={(index) => setActiveSlide(index)} 
     >
       <div>
         <Image src={img1} alt="Image 1" width={1200} height={800} layout="responsive" />

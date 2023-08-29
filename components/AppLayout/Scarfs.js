@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser , faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import LogoImage from "../../public/logo2.png";
 import Card from './Card';
 import './Card.module.css';
-
-
+import Cart from '../Cart';
+import CartIcon from '../CartIcon';
 
 export const Scarfs = ({ children }) => {
   const { user } = useUser();
@@ -72,36 +72,13 @@ export const Scarfs = ({ children }) => {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div onClick={toggleUserInfo}>
-            <FontAwesomeIcon
-              icon={faUser}
-              className="text-yellow-500 cursor-pointer"
-            />
-            {showUserInfo && (
-              <div className="bg-white p-2 absolute top-10 right-0 rounded-md shadow-md">
-                <div className="flex flex-col items-center text-gray-800 font-bold">
-                  <Image
-                    src={user.picture}
-                    alt={user.name}
-                    height={50}
-                    width={50}
-                    className="rounded-full mb-2"
-                  />
-                  <div>{user.name}</div>
-                  <div>{user.email}</div>
-                </div>
-                <Link
-                  href="/api/auth/logout"
-                  className="text-gray-500 text-sm mt-2"
-                >
-                  Logout
-                </Link>
-              </div>
-            )}
-          </div>
+          
+          <CartIcon />
+         
         </div>
       </header>
       {children}
+      <Cart/>
     </div>
   );
 };

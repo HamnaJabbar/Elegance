@@ -1,6 +1,6 @@
-/* Card.module.css */
+
 .card {
-    /* Adjust width, height, and other properties as needed */
+   
     width: 350px;
     height: 450px;
     background-color:white;
@@ -28,3 +28,11 @@
     color: #000;
   }
   
+
+  .addButton {
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }

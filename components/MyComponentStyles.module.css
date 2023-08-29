@@ -1,0 +1,26 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 70px;
+  background-color: rgb(131, 187, 131);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px; 
+  cursor: pointer;
+}
+
+.quote-box {
+  background-color: pink;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}

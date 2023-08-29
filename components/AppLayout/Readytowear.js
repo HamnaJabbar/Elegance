@@ -1,15 +1,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
-import { faUser } from "@fortawesome/free-solid-svg-icons"; // Import the icon you're using
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser , faShoppingCart } from "@fortawesome/free-solid-svg-icons"; 
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import LogoImage from "../../public/logo2.png";
 import Card from './Card';
 import './Card.module.css';
-
-
+import Cart from '../Cart';
+import CartIcon from '../CartIcon';
+import MyComponent from '../Quote';
 
 export const Readytowear = ({ children }) => {
   const { user } = useUser();
@@ -68,11 +69,11 @@ export const Readytowear = ({ children }) => {
              Rs.7000
               </Card>
               </div>
-            
+              <MyComponent/>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div onClick={toggleUserInfo}>
+          {/* <div onClick={toggleUserInfo}>
             <FontAwesomeIcon
               icon={faUser}
               className="text-yellow-500 cursor-pointer"
@@ -98,10 +99,15 @@ export const Readytowear = ({ children }) => {
                 </Link>
               </div>
             )}
-          </div>
+              <br/>
+            <br/> */}
+          <CartIcon />
+         
+         
         </div>
       </header>
       {children}
+      <Cart/>
     </div>
   );
 };
